@@ -1,0 +1,350 @@
+:root{
+  --main: #4a4948;
+  --sub: #caac7d;
+  --txt: #888888;
+}
+*{margin: 0; padding: 0; font-size: 16px;}
+a{text-decoration: none; display: block; color: var(--txt);}
+li{list-style: none;}
+header, section, footer, div{box-sizing: border-box;}
+body{background-color: #ffffff;}
+.txhd{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  clip-path: inset(50%);
+}
+
+#wrap{
+  width: 100%;
+}
+.min-box{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+header{
+  width: 100%; 
+  height: 100px;
+}
+header .min-box{  
+  position: relative;
+  height: 100px;
+  background-color: #ddd;
+}
+
+header .logo{
+  float: left;
+  margin-left: 10px;
+}
+header .logo a{
+  width: 200px;
+  height: 40px;
+  padding: 30px 0;
+}
+
+#GNB{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 500px;
+  text-align: center;
+  z-index: 100;
+}
+#GNB ul li{
+  background-color: #ffffff;
+}
+#GNB ul li a{
+  padding: 16px 0;
+}
+#GNB > ul > li > a{
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+}
+#GNB > ul > li > a:after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #f55;
+}
+#GNB > ul > li:hover > a:after{
+  width: 100%;
+  transition: all .5s;
+}
+
+#GNB > ul > li{
+  width: 125px;
+  float: left;
+}
+#GNB > ul > li:hover > a{
+  color: #eee;
+  background-color: var(--sub);
+}
+
+#GNB .sub{
+  display: none;
+}
+#GNB .sub li a{
+  font-size: 15px;
+}
+#GNB .sub li a:hover{
+  color: #eee;
+  background-color: var(--main);
+}
+
+/* slide */
+section#slide{
+  height: 300px;
+}
+.slide-box1{
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  overflow: hidden;
+}
+.slide-box2{
+  position: absolute;
+  width: 1200px;
+  height: 300px;
+}
+.slide-box2 .slide-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-box2 .slide-con a{
+  font-size: 20px;
+  font-weight: bold;
+  color: #fefefe;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgba(100, 100, 50, 0.7);
+}
+.slide-box2 .sl1{
+  background-image: url("../images/slide/img1.jpg");
+}
+.slide-box2 .sl2{
+  background-image: url("../images/slide/img2.jpg");
+  
+}
+.slide-box2 .sl3{
+  background-image: url("../images/slide/img3.jpg");
+}
+
+/* contents */
+section#contents{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7px;
+  height: 200px;
+  background-color: #caac7d;
+}
+section#contents > div{
+  width: 390px;
+  height: 185px;
+  background-color: #eee;
+}
+section#contents .con-title{
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--main);
+  margin: 8px 0 0 8px;
+}
+
+/* 공지사항 */
+.con-notice .not-box ul{
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.con-notice .not-box ul li{
+  border-bottom: 1px solid #888888;
+}
+.con-notice .not-box ul li a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.con-notice .not-box ul li:first-child:hover p{
+  color: #f55;
+}
+
+/* pop */
+#pop{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  left: 45%;
+  width: 310px;
+  height: 300px;
+  background-color: #fefefe;
+  border: 5px solid var(--main);
+  z-index: 999;
+}
+#pop h3{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--sub);
+}
+#pop p{
+  padding: 30px;
+}
+#pop button{
+  border: 0;
+  padding: 10px;
+  background-color: var(--main);
+  color: #eee;
+  cursor: pointer;
+}
+
+/* 갤러리 */
+.con-gallery .gall-box{
+  height: 145px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.con-gallery .gall-box .gall-con{
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #4a4948;
+  overflow: hidden;
+}
+.con-gallery .gall-box .gall-con a{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px;
+  z-index: 100;
+  color: #eee;
+  background-color: rgba(25,25,25,0.5);
+}
+.con-gallery .gall-box .gall-con img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px;
+  z-index: 90;
+}
+.con-gallery .gall-box .gl1 a{
+  opacity: 0;
+}
+.con-gallery .gall-box .gl1:hover a{
+  opacity: 1;
+  transition: all .5s;
+}
+.con-gallery .gall-box .gl2 a{
+  opacity: 0;
+  transform: translateY(100%);
+}
+.con-gallery .gall-box .gl2:hover a{
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all .5s;
+}
+.con-gallery .gall-box .gl3 a{
+  opacity: 0;
+  transform: scale(1.5);
+}
+.con-gallery .gall-box .gl3:hover a{
+  opacity: 1;
+  transform: scale(1.0);
+  transition: all .5s;
+}
+
+/* 베너 */
+.dir-box{
+  position: relative;
+}
+.dir-box a{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
+  height: 185px;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  z-index: 100;
+  background-color: rgba(200,200,200,0.6);
+  opacity: 0;
+}
+.dir-box:hover a{
+  opacity: 1;
+  transition: all .5s;
+}
+.dir-box img{
+  position: absolute;
+  width: 390px;
+  height: 185px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 90;
+}
+
+/* footer */
+footer{
+  width: 100%;
+  height: 100px;
+}
+footer .min-box{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+}
+footer .min-box .ft-logo{
+  margin-left: 10px;
+}
+footer .min-box .ft-address address{
+  font-style: normal;
+  color: #aaa;
+}
+footer .min-box .ft-menu{
+  margin-right: 10px;
+}
+footer .min-box .ft-menu ul li{
+  width: 85px;
+  height: 85px;
+  float: left;
+}
+footer .min-box .ft-menu ul li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .min-box .ft-menu ul li a:hover{
+  color: #f55;
+  text-decoration: underline;
+}
